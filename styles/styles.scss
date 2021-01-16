@@ -1,0 +1,875 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+@include font-face(Roboto, "./../fonts/Roboto-Regular.ttf");
+@include font-face(Bebas, "./../fonts/BebasNeue-Regular.ttf");
+@include font-face(Roboto-thin, "./../fonts/Roboto-Thin.ttf");
+
+body {
+  margin: 0px;
+
+  nav {
+    @include width-height(100%, 14vh);
+    @include flex-center;
+    justify-content: space-evenly;
+    position: fixed;
+    background-color: $blue-block;
+    color: $whith-text;
+    font-family: Roboto;
+    z-index: 1;
+
+    .business-reviews {
+      color: $whith-text;
+
+      span:first-child {
+        font-weight: $weight-lg;
+      }
+      span:last-child {
+        font-weight: $weight-md;
+      }
+    }
+
+    .links {
+      color: $whith-text;
+      font-size: 14px;
+      ul {
+        list-style-type: none;
+        li {
+          display: inline;
+          margin: 6px;
+          a {
+            text-decoration: none;
+            padding: 2px;
+            color: $whith-text;
+            &:hover {
+              @include border-whit-direction(bottom, 2px, solid, $yellow-text);
+              color: $yellow-text;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    @include width-height(100%);
+    background-color: $blue-block;
+
+    .header-main {
+      @include flex-center;
+      @include width-height(100%, 80%);
+
+      .prev {
+        width: 21%;
+        button {
+          @include prev-next-button;
+        }
+      }
+
+      .text {
+        width: 16%;
+        h1 {
+          font-size: 40px;
+          color: $yellow-text;
+          font-family: Bebas;
+          font-weight: $weight-md;
+          letter-spacing: 1px;
+          line-height: 36px;
+          margin-bottom: 0;
+        }
+        p {
+          font-size: 15px;
+          color: $whith-text;
+          opacity: 0.7;
+          font-family: Roboto-thin;
+        }
+      }
+
+      .header-pic {
+        width: 40%;
+        margin-top: 7%;
+        img {
+          width: 100%;
+        }
+      }
+      .next {
+        width: 19%;
+        text-align: right;
+        button {
+          @include prev-next-button;
+        }
+      }
+    }
+
+    .search {
+      @include flex-center;
+      margin-top: 2%;
+      padding-bottom: 30px;
+
+      input {
+        @include border-whit-radius($topleft: 20px, $bottomleft: 20px);
+        width: 20%;
+        padding: 6px;
+        border: none;
+      }
+      button {
+        @include border-whit-radius($topright: 20px, $bottomright: 20px);
+        font-size: 8px;
+        padding: 9px 14px;
+        margin-right: 4%;
+        color: $whith-text;
+        background-color: $yellow-text;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  main {
+    #reviews {
+      @include width-height(50%);
+      margin: 4% auto;
+
+      @include grid-reviews;
+      & :hover {
+        background-color: $blue-block;
+      }
+
+      > div {
+        @include flex-center;
+        padding: 2px;
+        font-family: Roboto;
+        font-size: 9px;
+        color: $light-text;
+        div:first-child {
+          @include border-whit-radius(
+            1px,
+            solid,
+            $light-border,
+            50%,
+            50%,
+            50%,
+            50%
+          );
+        }
+        div:last-child {
+          margin-left: 15px;
+        }
+
+        img {
+          @include width-height(20px, 20px);
+          padding: 8px;
+        }
+      }
+    }
+
+    hr {
+      @include width-height(50%, 1px);
+      background-color: $light-border;
+      border: none;
+      margin: 45px auto;
+    }
+
+    #news {
+      text-align: center;
+
+      h3 {
+        color: $blue-text;
+        font-family: Bebas;
+      }
+
+      .news-block {
+        @include flex-center;
+        font-family: Roboto;
+
+        > div {
+          @include width-height(24%, 50vh);
+          box-shadow: 2px 3px 3px rgb(197, 195, 195);
+          text-align: left;
+
+          margin: 10px 5px;
+          img {
+            width: 100%;
+          }
+          h6 {
+            margin: 10px 0px 0px 10px;
+          }
+          .text {
+            @include width-height(94%, 6vh);
+            margin: auto;
+            text-align: justify;
+            overflow: hidden;
+            margin-bottom: 8px;
+            p {
+              font-size: 11px;
+              color: $light-text;
+            }
+          }
+          .see-more {
+            text-align: left;
+            margin: 10px 10px;
+
+            a {
+              color: $blue-text;
+              font-size: 12px;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    .partners {
+      @include width-height(100%);
+      text-align: center;
+      font-family: Bebas;
+      background-color: $blue-block;
+      margin-top: 40px;
+      h3 {
+        padding-top: 25px;
+        color: $whith-text;
+        font-weight: $weight-md;
+        margin-bottom: 0px;
+      }
+      > div {
+        @include flex-center;
+        button {
+          @include prev-next-button;
+          color: $whith-text;
+          border-color: $whith-text;
+          font-size: 7px;
+          padding: 5px 6px;
+        }
+        img {
+          margin: 30px;
+        }
+      }
+    }
+
+    #blog {
+      text-align: center;
+      h3 {
+        font-family: Bebas;
+        color: $blue-text;
+      }
+      > div {
+        @include flex-center;
+
+        > div {
+          box-shadow: 2px 3px 3px rgb(197, 195, 195);
+          margin: 10px 5px;
+
+          @include width-height(15%, 52vh);
+
+          img {
+            width: 100%;
+          }
+
+          .text {
+            width: 90%;
+            font-family: ROBOTO;
+            text-align: left;
+            margin-left: 10px;
+            span {
+              font-size: 10px;
+              color: $light-text;
+            }
+            h6 {
+              margin-top: 10px;
+            }
+            p {
+              font-size: 10px;
+              color: $light-text;
+            }
+          }
+        }
+      }
+
+      button {
+        @include border-whit-radius(
+          $topleft: 20px,
+          $bottomleft: 20px,
+          $topright: 20px,
+          $bottomright: 20px
+        );
+        color: $whith-text;
+        background-color: $blue-block;
+        @include button-more;
+      }
+    }
+
+    .communication {
+      background-color: $blue-block;
+      text-align: center;
+      font-family: Roboto;
+      margin-top: 35px;
+      form {
+        width: 30%;
+        margin: auto;
+        padding-top: 55px;
+        input {
+          width: 96%;
+          margin-bottom: 15px;
+          padding: 7px 10px;
+          @include border-whit-radius(
+            $topleft: 20px,
+            $bottomleft: 20px,
+            $topright: 20px,
+            $bottomright: 20px
+          );
+          border: none;
+        }
+        textarea {
+          @include border-whit-radius(
+            $topleft: 15px,
+            $bottomleft: 15px,
+            $topright: 15px,
+            $bottomright: 15px
+          );
+          width: 96%;
+          padding-left: 15px;
+        }
+        button {
+          @include border-whit-radius(
+            $topleft: 20px,
+            $bottomleft: 20px,
+            $topright: 20px,
+            $bottomright: 20px
+          );
+          color: $light-text;
+          @include button-more;
+          margin-bottom: 50px;
+        }
+      }
+    }
+
+    #about {
+      @include flex-center;
+      font-family: Roboto;
+      background-color: #1f1f1f;
+
+      div {
+        @include width-height(222px, 22vh);
+        margin: 20px;
+        position: relative;
+
+        h6 {
+          color: $yellow-text;
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-size: 10px;
+          margin-left: 35px;
+          color: $light-text;
+          span {
+            color: $blue-text;
+          }
+        }
+
+        i {
+          position: absolute;
+          font-size: 30px;
+          color: $light-text;
+        }
+        &:last-child {
+          p {
+            margin-left: 0;
+          }
+          input {
+            @include border-whit-radius($topleft: 20px, $bottomleft: 20px);
+            background-color: #707b81;
+            font-size: 10px;
+            width: 60%;
+            padding: 9px;
+            border: none;
+          }
+          ::placeholder {
+            color: wheat;
+          }
+
+          button {
+            @include border-whit-radius($topright: 20px, $bottomright: 20px);
+            font-size: 9px;
+            padding: 9.5px 12px;
+            color: $whith-text;
+            background-color: $yellow-text;
+            border: none;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    @include flex-center;
+    justify-content: space-evenly;
+    background-color: #181818;
+    font-family: Roboto;
+    p {
+      color: $light-text;
+      font-size: 13px;
+    }
+    h3 {
+      color: $whith-text;
+      font-weight: $weight-lg;
+      > span {
+        font-weight: $weight-md;
+      }
+    }
+    > div {
+      a {
+        color: $whith-text;
+        font-size: 13px;
+        margin: 5px;
+        &:nth-child(2) {
+          color: $blue-text;
+        }
+      }
+    }
+  }
+}
+
+@include media(1200px) {
+  body {
+    nav {
+      @include width-height(100%, 10vh);
+    }
+    main {
+      #reviews {
+        @include width-height(70%);
+        margin: 4% auto;
+      }
+    }
+  }
+}
+
+@include media(1050px) {
+  body {
+    header {
+      .header-main {
+        .text {
+          margin-top: 40px;
+          margin-right: 25px;
+          h1 {
+            font-size: 30px;
+          }
+        }
+      }
+      .search {
+        input {
+          width: 40%;
+        }
+      }
+    }
+    main {
+      #reviews {
+        @include width-height(100%);
+      }
+
+      #blog {
+        div {
+          div {
+            @include width-height(25%, 56vh);
+          }
+        }
+      }
+      .communication {
+        form {
+          width: 50%;
+        }
+      }
+      #news {
+        .news-block {
+          > div {
+            @include width-height(30%, 50vh);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media(803px) {
+  body {
+    main {
+      #about {
+        div {
+          @include width-height(31%, 24vh);
+          margin: 5px;
+        }
+      }
+    }
+  }
+}
+
+@include media(669px) {
+  body {
+    header {
+      .header-main {
+        .prev {
+          width: 8%;
+        }
+
+        .text {
+          width: 36%;
+          h1 {
+            font-size: 26px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+
+        .header-pic {
+          width: 29%;
+        }
+        .next {
+          width: 8%;
+        }
+      }
+    }
+
+    main {
+      #reviews {
+        @include grid-reviews;
+        grid-template-columns: auto auto auto;
+      }
+
+      .partners {
+        > div {
+          img {
+            margin: 10px;
+          }
+        }
+      }
+      #about {
+        div {
+          @include width-height(100%, 10vh);
+          margin-bottom: 30px;
+          &:last-child {
+            padding-bottom: 55px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media(539px) {
+  body {
+    nav {
+      @include width-height(100%, 7vh);
+      @include flex-center;
+
+      .business-reviews {
+        h2 {
+          font-size: 18px;
+        }
+      }
+      .links {
+        font-size: 12px;
+        ul {
+          li {
+            margin: 3px;
+            a {
+              padding: 1px;
+            }
+          }
+        }
+      }
+    }
+
+    header {
+      .header-main {
+        .prev {
+          width: 5%;
+          margin-right: 28px;
+        }
+
+        .text {
+          width: 36%;
+        }
+
+        .header-pic {
+          width: 34%;
+        }
+        .next {
+          width: 5%;
+          text-align: right;
+        }
+      }
+    }
+
+    main {
+      #blog {
+        div {
+          div {
+            @include width-height(55%, 56vh);
+          }
+        }
+      }
+      #news {
+        .news-block {
+          > div {
+            @include width-height(55%, 50vh);
+          }
+        }
+      }
+      .partners {
+        > div {
+          img {
+            width: 75px;
+            margin: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media(442px) {
+  body {
+    nav {
+      @include width-height(100%, 7vh);
+
+      .business-reviews {
+        h2 {
+          font-size: 15px;
+        }
+      }
+      .links {
+        font-size: 10px;
+        ul {
+          li {
+            margin: 2px;
+            a {
+              padding: 1px;
+            }
+          }
+        }
+      }
+    }
+
+    header {
+      .header-main {
+        .prev {
+          width: 5%;
+          margin-right: 28px;
+        }
+
+        .text {
+          width: 32%;
+          margin-right: 0px;
+        }
+
+        .header-pic {
+          width: 45%;
+        }
+        .next {
+          width: 5%;
+          text-align: left;
+          margin-right: 20px;
+        }
+      }
+      .search {
+        input {
+          width: 65%;
+          padding: 6px;
+          border: none;
+        }
+      }
+    }
+
+    main {
+      #reviews {
+        @include grid-reviews;
+        grid-template-columns: auto auto;
+      }
+      #news {
+        .news-block {
+          > div {
+            @include width-height(75%, 50vh);
+          }
+        }
+      }
+      .partners {
+        h3 {
+          padding-top: 10px;
+        }
+        > div {
+          img {
+            width: 65px;
+            margin: 5px;
+          }
+        }
+      }
+
+      #blog {
+        div {
+          div {
+            @include width-height(75%, 58vh);
+          }
+        }
+      }
+      .communication {
+        form {
+          width: 80%;
+        }
+      }
+    }
+
+    footer {
+      p {
+        color: $light-text;
+        font-size: 10px;
+      }
+      h3 {
+        color: $whith-text;
+        font-weight: $weight-lg;
+        font-size: 15px;
+        > span {
+          font-weight: $weight-md;
+        }
+      }
+      > div {
+        a {
+          color: $whith-text;
+          font-size: 10px;
+          margin: 5px;
+          &:nth-child(2) {
+            color: $blue-text;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media(386px) {
+  body {
+    nav {
+      @include width-height(100%, 7vh);
+
+      .business-reviews {
+        h2 {
+          font-size: 11px;
+          margin-right: -5px;
+          margin-left: 2px;
+        }
+      }
+      .links {
+        font-size: 9px;
+        ul {
+          li {
+            margin: 2px;
+            a {
+              padding: 0px;
+            }
+          }
+        }
+      }
+    }
+
+    header {
+      .header-main {
+        .prev {
+          width: 5%;
+          margin-right: 15px;
+          button {
+            padding: 1px 3px;
+          }
+        }
+
+        .text {
+          width: 25%;
+          margin-right: 8px;
+          h1 {
+            font-size: 16px;
+            line-height: 15px;
+          }
+          p {
+            font-size: 10px;
+          }
+        }
+
+        .header-pic {
+          width: 45%;
+        }
+        .next {
+          width: 5%;
+          margin-right: 1px;
+          button {
+            padding: 1px 3px;
+          }
+        }
+      }
+      .search {
+        input {
+          width: 65%;
+          padding: 6px;
+          border: none;
+        }
+      }
+    }
+
+    main {
+      #reviews {
+        @include grid-reviews;
+        grid-template-columns: auto;
+      }
+
+      .partners {
+        h3 {
+          padding-top: 10px;
+          font-size: 14px;
+        }
+        > div {
+          img {
+            width: 55px;
+            margin: 3px;
+          }
+        }
+      }
+
+      #blog {
+        div {
+          div {
+            @include width-height(75%, 58vh);
+          }
+        }
+      }
+      .communication {
+        form {
+          width: 80%;
+        }
+      }
+    }
+
+    footer {
+      p {
+        color: $light-text;
+        font-size: 10px;
+      }
+      h3 {
+        color: $whith-text;
+        font-weight: $weight-lg;
+        font-size: 15px;
+        > span {
+          font-weight: $weight-md;
+        }
+      }
+      > div {
+        a {
+          color: $whith-text;
+          font-size: 10px;
+          margin: 5px;
+          &:nth-child(2) {
+            color: $blue-text;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@mixin font-face($font-name, $path) {
+  @font-face {
+    font-family: $font-name;
+    src: url($path);
+  }
+}
+
+@mixin width-height($w, $h: $w) {
+  width: $w;
+  height: $h;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin prev-next-button {
+  cursor: pointer;
+  background-color: $blue-block;
+  color: $yellow-text;
+  padding: 9px 12px;
+  @include border-whit-radius(1px, solid, $yellow-text, 50%, 50%, 50%, 50%);
+}
+
+@mixin border-whit-direction($direction, $width, $style, $color) {
+  border-#{$direction}: $width $style $color;
+}
+
+@mixin border-whit-radius(
+  $width: null,
+  $style: null,
+  $color: null,
+  $topleft: null,
+  $topright: null,
+  $bottomright: null,
+  $bottomleft: null
+) {
+  border: $width $style $color;
+  @if $topleft != null and $topleft >= 0 {
+    border-top-left-radius: $topleft;
+  }
+
+  @if $topright != null and $topright >= 0 {
+    border-top-right-radius: $topright;
+  }
+
+  @if $bottomleft != null and $bottomleft >= 0 {
+    border-bottom-left-radius: $bottomleft;
+  }
+
+  @if $bottomright != null and $bottomright >= 0 {
+    border-bottom-right-radius: $bottomright;
+  }
+}
+
+@mixin grid-reviews {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 40px 2px;
+}
+
+@mixin button-more {
+  font-size: 9px;
+  border: none;
+  margin-top: 35px;
+  padding: 9px 40px;
+  cursor: pointer;
+}
+
+@mixin media($max-width) {
+  @media only screen and(max-width: $max-width) {
+    @content;
+  }
+}

@@ -1,0 +1,951 @@
+@font-face {
+  font-family: Roboto;
+  src: url("./../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: Bebas;
+  src: url("./../fonts/BebasNeue-Regular.ttf");
+}
+
+@font-face {
+  font-family: Roboto-thin;
+  src: url("./../fonts/Roboto-Thin.ttf");
+}
+
+body {
+  margin: 0px;
+}
+
+body nav {
+  width: 100%;
+  height: 14vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: fixed;
+  background-color: #1e8bc3;
+  color: #ffffff;
+  font-family: Roboto;
+  z-index: 1;
+}
+
+body nav .business-reviews {
+  color: #ffffff;
+}
+
+body nav .business-reviews span:first-child {
+  font-weight: 600;
+}
+
+body nav .business-reviews span:last-child {
+  font-weight: 500;
+}
+
+body nav .links {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+body nav .links ul {
+  list-style-type: none;
+}
+
+body nav .links ul li {
+  display: inline;
+  margin: 6px;
+}
+
+body nav .links ul li a {
+  text-decoration: none;
+  padding: 2px;
+  color: #ffffff;
+}
+
+body nav .links ul li a:hover {
+  border-bottom: 2px solid #ffbc18;
+  color: #ffbc18;
+}
+
+body header {
+  width: 100%;
+  height: 100%;
+  background-color: #1e8bc3;
+}
+
+body header .header-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 80%;
+}
+
+body header .header-main .prev {
+  width: 21%;
+}
+
+body header .header-main .prev button {
+  cursor: pointer;
+  background-color: #1e8bc3;
+  color: #ffbc18;
+  padding: 9px 12px;
+  border: 1px solid #ffbc18;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+body header .header-main .text {
+  width: 16%;
+}
+
+body header .header-main .text h1 {
+  font-size: 40px;
+  color: #ffbc18;
+  font-family: Bebas;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 36px;
+  margin-bottom: 0;
+}
+
+body header .header-main .text p {
+  font-size: 15px;
+  color: #ffffff;
+  opacity: 0.7;
+  font-family: Roboto-thin;
+}
+
+body header .header-main .header-pic {
+  width: 40%;
+  margin-top: 7%;
+}
+
+body header .header-main .header-pic img {
+  width: 100%;
+}
+
+body header .header-main .next {
+  width: 19%;
+  text-align: right;
+}
+
+body header .header-main .next button {
+  cursor: pointer;
+  background-color: #1e8bc3;
+  color: #ffbc18;
+  padding: 9px 12px;
+  border: 1px solid #ffbc18;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+body header .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 2%;
+  padding-bottom: 30px;
+}
+
+body header .search input {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 20%;
+  padding: 6px;
+  border: none;
+}
+
+body header .search button {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 8px;
+  padding: 9px 14px;
+  margin-right: 4%;
+  color: #ffffff;
+  background-color: #ffbc18;
+  border: none;
+  cursor: pointer;
+}
+
+body main #reviews {
+  width: 50%;
+  height: 50%;
+  margin: 4% auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  grid-gap: 40px 2px;
+}
+
+body main #reviews :hover {
+  background-color: #1e8bc3;
+}
+
+body main #reviews > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 2px;
+  font-family: Roboto;
+  font-size: 9px;
+  color: #a5a4a4;
+}
+
+body main #reviews > div div:first-child {
+  border: 1px solid #dfdfdf;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+body main #reviews > div div:last-child {
+  margin-left: 15px;
+}
+
+body main #reviews > div img {
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+}
+
+body main hr {
+  width: 50%;
+  height: 1px;
+  background-color: #dfdfdf;
+  border: none;
+  margin: 45px auto;
+}
+
+body main #news {
+  text-align: center;
+}
+
+body main #news h3 {
+  color: #359cd1;
+  font-family: Bebas;
+}
+
+body main #news .news-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: Roboto;
+}
+
+body main #news .news-block > div {
+  width: 24%;
+  height: 50vh;
+  -webkit-box-shadow: 2px 3px 3px #c5c3c3;
+          box-shadow: 2px 3px 3px #c5c3c3;
+  text-align: left;
+  margin: 10px 5px;
+}
+
+body main #news .news-block > div img {
+  width: 100%;
+}
+
+body main #news .news-block > div h6 {
+  margin: 10px 0px 0px 10px;
+}
+
+body main #news .news-block > div .text {
+  width: 94%;
+  height: 6vh;
+  margin: auto;
+  text-align: justify;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+body main #news .news-block > div .text p {
+  font-size: 11px;
+  color: #a5a4a4;
+}
+
+body main #news .news-block > div .see-more {
+  text-align: left;
+  margin: 10px 10px;
+}
+
+body main #news .news-block > div .see-more a {
+  color: #359cd1;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+body main .partners {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: Bebas;
+  background-color: #1e8bc3;
+  margin-top: 40px;
+}
+
+body main .partners h3 {
+  padding-top: 25px;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+body main .partners > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main .partners > div button {
+  cursor: pointer;
+  background-color: #1e8bc3;
+  color: #ffbc18;
+  padding: 9px 12px;
+  border: 1px solid #ffbc18;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  color: #ffffff;
+  border-color: #ffffff;
+  font-size: 7px;
+  padding: 5px 6px;
+}
+
+body main .partners > div img {
+  margin: 30px;
+}
+
+body main #blog {
+  text-align: center;
+}
+
+body main #blog h3 {
+  font-family: Bebas;
+  color: #359cd1;
+}
+
+body main #blog > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main #blog > div > div {
+  -webkit-box-shadow: 2px 3px 3px #c5c3c3;
+          box-shadow: 2px 3px 3px #c5c3c3;
+  margin: 10px 5px;
+  width: 15%;
+  height: 52vh;
+}
+
+body main #blog > div > div img {
+  width: 100%;
+}
+
+body main #blog > div > div .text {
+  width: 90%;
+  font-family: ROBOTO;
+  text-align: left;
+  margin-left: 10px;
+}
+
+body main #blog > div > div .text span {
+  font-size: 10px;
+  color: #a5a4a4;
+}
+
+body main #blog > div > div .text h6 {
+  margin-top: 10px;
+}
+
+body main #blog > div > div .text p {
+  font-size: 10px;
+  color: #a5a4a4;
+}
+
+body main #blog button {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: #ffffff;
+  background-color: #1e8bc3;
+  font-size: 9px;
+  border: none;
+  margin-top: 35px;
+  padding: 9px 40px;
+  cursor: pointer;
+}
+
+body main .communication {
+  background-color: #1e8bc3;
+  text-align: center;
+  font-family: Roboto;
+  margin-top: 35px;
+}
+
+body main .communication form {
+  width: 30%;
+  margin: auto;
+  padding-top: 55px;
+}
+
+body main .communication form input {
+  width: 96%;
+  margin-bottom: 15px;
+  padding: 7px 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: none;
+}
+
+body main .communication form textarea {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 96%;
+  padding-left: 15px;
+}
+
+body main .communication form button {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: #a5a4a4;
+  font-size: 9px;
+  border: none;
+  margin-top: 35px;
+  padding: 9px 40px;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+body main #about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: Roboto;
+  background-color: #1f1f1f;
+}
+
+body main #about div {
+  width: 222px;
+  height: 22vh;
+  margin: 20px;
+  position: relative;
+}
+
+body main #about div h6 {
+  color: #ffbc18;
+  margin-bottom: 5px;
+}
+
+body main #about div p {
+  font-size: 10px;
+  margin-left: 35px;
+  color: #a5a4a4;
+}
+
+body main #about div p span {
+  color: #359cd1;
+}
+
+body main #about div i {
+  position: absolute;
+  font-size: 30px;
+  color: #a5a4a4;
+}
+
+body main #about div:last-child p {
+  margin-left: 0;
+}
+
+body main #about div:last-child input {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #707b81;
+  font-size: 10px;
+  width: 60%;
+  padding: 9px;
+  border: none;
+}
+
+body main #about div:last-child ::-webkit-input-placeholder {
+  color: wheat;
+}
+
+body main #about div:last-child :-ms-input-placeholder {
+  color: wheat;
+}
+
+body main #about div:last-child ::-ms-input-placeholder {
+  color: wheat;
+}
+
+body main #about div:last-child ::placeholder {
+  color: wheat;
+}
+
+body main #about div:last-child button {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 9px;
+  padding: 9.5px 12px;
+  color: #ffffff;
+  background-color: #ffbc18;
+  border: none;
+  cursor: pointer;
+}
+
+body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #181818;
+  font-family: Roboto;
+}
+
+body footer p {
+  color: #a5a4a4;
+  font-size: 13px;
+}
+
+body footer h3 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+body footer h3 > span {
+  font-weight: 500;
+}
+
+body footer > div a {
+  color: #ffffff;
+  font-size: 13px;
+  margin: 5px;
+}
+
+body footer > div a:nth-child(2) {
+  color: #359cd1;
+}
+
+@media only screen and (max-width: 1200px) {
+  body nav {
+    width: 100%;
+    height: 10vh;
+  }
+  body main #reviews {
+    width: 70%;
+    height: 70%;
+    margin: 4% auto;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  body header .header-main .text {
+    margin-top: 40px;
+    margin-right: 25px;
+  }
+  body header .header-main .text h1 {
+    font-size: 30px;
+  }
+  body header .search input {
+    width: 40%;
+  }
+  body main #reviews {
+    width: 100%;
+    height: 100%;
+  }
+  body main #blog div div {
+    width: 25%;
+    height: 56vh;
+  }
+  body main .communication form {
+    width: 50%;
+  }
+  body main #news .news-block > div {
+    width: 30%;
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 803px) {
+  body main #about div {
+    width: 31%;
+    height: 24vh;
+    margin: 5px;
+  }
+}
+
+@media only screen and (max-width: 669px) {
+  body header .header-main .prev {
+    width: 8%;
+  }
+  body header .header-main .text {
+    width: 36%;
+  }
+  body header .header-main .text h1 {
+    font-size: 26px;
+  }
+  body header .header-main .text p {
+    font-size: 12px;
+  }
+  body header .header-main .header-pic {
+    width: 29%;
+  }
+  body header .header-main .next {
+    width: 8%;
+  }
+  body main #reviews {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+    grid-gap: 40px 2px;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+  body main .partners > div img {
+    margin: 10px;
+  }
+  body main #about div {
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 30px;
+  }
+  body main #about div:last-child {
+    padding-bottom: 55px;
+  }
+}
+
+@media only screen and (max-width: 539px) {
+  body nav {
+    width: 100%;
+    height: 7vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body nav .business-reviews h2 {
+    font-size: 18px;
+  }
+  body nav .links {
+    font-size: 12px;
+  }
+  body nav .links ul li {
+    margin: 3px;
+  }
+  body nav .links ul li a {
+    padding: 1px;
+  }
+  body header .header-main .prev {
+    width: 5%;
+    margin-right: 28px;
+  }
+  body header .header-main .text {
+    width: 36%;
+  }
+  body header .header-main .header-pic {
+    width: 34%;
+  }
+  body header .header-main .next {
+    width: 5%;
+    text-align: right;
+  }
+  body main #blog div div {
+    width: 55%;
+    height: 56vh;
+  }
+  body main #news .news-block > div {
+    width: 55%;
+    height: 50vh;
+  }
+  body main .partners > div img {
+    width: 75px;
+    margin: 7px;
+  }
+}
+
+@media only screen and (max-width: 442px) {
+  body nav {
+    width: 100%;
+    height: 7vh;
+  }
+  body nav .business-reviews h2 {
+    font-size: 15px;
+  }
+  body nav .links {
+    font-size: 10px;
+  }
+  body nav .links ul li {
+    margin: 2px;
+  }
+  body nav .links ul li a {
+    padding: 1px;
+  }
+  body header .header-main .prev {
+    width: 5%;
+    margin-right: 28px;
+  }
+  body header .header-main .text {
+    width: 32%;
+    margin-right: 0px;
+  }
+  body header .header-main .header-pic {
+    width: 45%;
+  }
+  body header .header-main .next {
+    width: 5%;
+    text-align: left;
+    margin-right: 20px;
+  }
+  body header .search input {
+    width: 65%;
+    padding: 6px;
+    border: none;
+  }
+  body main #reviews {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+    grid-gap: 40px 2px;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  body main #news .news-block > div {
+    width: 75%;
+    height: 50vh;
+  }
+  body main .partners h3 {
+    padding-top: 10px;
+  }
+  body main .partners > div img {
+    width: 65px;
+    margin: 5px;
+  }
+  body main #blog div div {
+    width: 75%;
+    height: 58vh;
+  }
+  body main .communication form {
+    width: 80%;
+  }
+  body footer p {
+    color: #a5a4a4;
+    font-size: 10px;
+  }
+  body footer h3 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  body footer h3 > span {
+    font-weight: 500;
+  }
+  body footer > div a {
+    color: #ffffff;
+    font-size: 10px;
+    margin: 5px;
+  }
+  body footer > div a:nth-child(2) {
+    color: #359cd1;
+  }
+}
+
+@media only screen and (max-width: 386px) {
+  body nav {
+    width: 100%;
+    height: 7vh;
+  }
+  body nav .business-reviews h2 {
+    font-size: 11px;
+    margin-right: -5px;
+    margin-left: 2px;
+  }
+  body nav .links {
+    font-size: 9px;
+  }
+  body nav .links ul li {
+    margin: 2px;
+  }
+  body nav .links ul li a {
+    padding: 0px;
+  }
+  body header .header-main .prev {
+    width: 5%;
+    margin-right: 15px;
+  }
+  body header .header-main .prev button {
+    padding: 1px 3px;
+  }
+  body header .header-main .text {
+    width: 25%;
+    margin-right: 8px;
+  }
+  body header .header-main .text h1 {
+    font-size: 16px;
+    line-height: 15px;
+  }
+  body header .header-main .text p {
+    font-size: 10px;
+  }
+  body header .header-main .header-pic {
+    width: 45%;
+  }
+  body header .header-main .next {
+    width: 5%;
+    margin-right: 1px;
+  }
+  body header .header-main .next button {
+    padding: 1px 3px;
+  }
+  body header .search input {
+    width: 65%;
+    padding: 6px;
+    border: none;
+  }
+  body main #reviews {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+    grid-gap: 40px 2px;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  body main .partners h3 {
+    padding-top: 10px;
+    font-size: 14px;
+  }
+  body main .partners > div img {
+    width: 55px;
+    margin: 3px;
+  }
+  body main #blog div div {
+    width: 75%;
+    height: 58vh;
+  }
+  body main .communication form {
+    width: 80%;
+  }
+  body footer p {
+    color: #a5a4a4;
+    font-size: 10px;
+  }
+  body footer h3 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  body footer h3 > span {
+    font-weight: 500;
+  }
+  body footer > div a {
+    color: #ffffff;
+    font-size: 10px;
+    margin: 5px;
+  }
+  body footer > div a:nth-child(2) {
+    color: #359cd1;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
